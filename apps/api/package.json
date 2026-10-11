@@ -1,0 +1,36 @@
+{
+  "name": "@vedaa/api",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "echo 'no lint configured'"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.7",
+    "@hono/zod-validator": "^0.4.2",
+    "@vedaa/database": "*",
+    "@vedaa/shared": "*",
+    "bcryptjs": "^2.4.3",
+    "better-auth": "^1.2.3",
+    "dotenv": "^18.0.7",
+    "hono": "^4.6.14",
+    "luxon": "^3.5.0",
+    "razorpay": "^2.9.5",
+    "uploadthing": "^7.7.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/luxon": "^3.4.2",
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

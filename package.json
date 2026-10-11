@@ -1,0 +1,28 @@
+{
+  "name": "vedaa-mart",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web \"npm run dev -w @vedaa/api\" \"npm run dev -w @vedaa/web\"",
+    "dev:web": "npm run dev -w @vedaa/web",
+    "dev:api": "npm run dev -w @vedaa/api",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "db:generate": "npm run generate -w @vedaa/database",
+    "db:migrate": "npm run migrate:dev -w @vedaa/database",
+    "db:push": "npm run push -w @vedaa/database",
+    "db:seed": "npm run seed -w @vedaa/database",
+    "db:studio": "npm run studio -w @vedaa/database"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
